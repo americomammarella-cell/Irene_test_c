@@ -43,7 +43,8 @@ int prossimaPermutazione(char s[], int n) {
 
 int main(void) {
     char parola[100];
-
+    int num_perm = 0;
+   
     printf("Inserisci una parola: ");
     scanf("%99s", parola);
 
@@ -59,7 +60,9 @@ int main(void) {
 
     do {
         printf("%s\n", parola);
+        num_perm++;
     } while (prossimaPermutazione(parola, n));
 
+    printf("Numero di permutazioni: %d\n", num_perm);
     return 0;
 }
